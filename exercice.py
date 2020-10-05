@@ -10,17 +10,33 @@ def reverse_data(data: list = None):
     # les stocker dans une structure de données,
     # et les retourner en ordre inverse, sans utiliser de liste.
 
+    reversed_data = Stack()
+
     if data is None:
-        pass  # Demander les valeurs ici
+        data = [input("Veuillez entre une valeur") for _ in range(10)]
 
-    reversed_data = None  # Stocker le résultat ici
+    reversed_data.put_many(data)
 
-    return reversed_data
+    liste = []
+    for _ in range(len(reversed_data)):
+        liste.append(reversed_data.get())
+
+    #ou simplement return [reversed_data.get() for _ in range(len(reversed_data))]
+
+    return liste
 
 
 def delete_nth_from_stack(data: Stack, position: int) -> Stack:
     # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
-    return Stack()
+    #Voir solutions screenshots du 5 octobre
+    x = Stack()
+    for i in range(len(data)):
+        if i == position:
+            data.get()
+        else:
+            x.put(data.get())
+
+    return x
 
 
 def delete_nth_from_queue(data: Queue, position: int) -> Queue:
@@ -64,7 +80,7 @@ def main() -> None:
 
     lifo = Stack()
     lifo.put_many([randint(0, 1000) for _ in range(20)])
-    print(f"On ordonne une file: {sort_queue(lifo)}")
+    print(f"On ordonne une file: {sort_stack(lifo)}")
 
     fifo = Queue()
     fifo.put_many([randint(0, 1000) for _ in range(20)])
