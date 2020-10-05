@@ -19,7 +19,7 @@ FAIL: test_delete_queue (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 53, in test_delete_queue
     'Mauvaise reponse'
-AssertionError: [] != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] : Mauvaise reponse
+AssertionError: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] : Mauvaise reponse
 
 ======================================================================
 FAIL: test_delete_stack (__main__.TestExercice)
@@ -27,7 +27,7 @@ FAIL: test_delete_stack (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 38, in test_delete_stack
     'Mauvaise reponse'
-AssertionError: [19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1] != [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] : Mauvaise reponse
+AssertionError: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] != [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] : Mauvaise reponse
 
 ======================================================================
 FAIL: test_sort_queue (__main__.TestExercice)
@@ -35,7 +35,7 @@ FAIL: test_sort_queue (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 83, in test_sort_queue
     'Mauvaise reponse'
-AssertionError: [] != [37, 88, 119, 136, 146, 192, 252, 355, 379[51 chars] 927] : Mauvaise reponse
+AssertionError: [101,[32 chars]56, 373, 387, 416, 567, 609, 663, 692, 727, 746, 785, 809, 848] != [101,[32 chars]56, 373, 387, 416, 567, 609, 663, 692, 727, 746, 785, 809, 848] : Mauvaise reponse
 
 ======================================================================
 FAIL: test_sort_stack (__main__.TestExercice)
@@ -43,7 +43,7 @@ FAIL: test_sort_stack (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 68, in test_sort_stack
     'Mauvaise reponse'
-AssertionError: [] != [71, 102, 123, 187, 206, 283, 349, 367, 37[52 chars] 962] : Mauvaise reponse
+AssertionError: [47, [30 chars]29, 454, 484, 511, 518, 565, 595, 598, 779, 793, 802, 856, 890] != [47, [30 chars]29, 454, 484, 511, 518, 565, 595, 598, 779, 793, 802, 856, 890] : Mauvaise reponse
 
 ----------------------------------------------------------------------
 Ran 6 tests in 0.002s
