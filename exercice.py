@@ -30,6 +30,19 @@ def delete_nth_from_stack(data: Stack, position: int) -> Stack:
     # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
     #Voir solutions screenshots du 5 octobre
     x = Stack()
+    y = len(data)
+    for i in range(len(data)):
+        if i == y - position - 1:
+            data.get()
+        else:
+            x.put(data.get())
+
+    return [x.get() for _ in range(len(x))]
+
+
+def delete_nth_from_queue(data: Queue, position: int) -> Queue:
+    # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
+    x = Queue()
     for i in range(len(data)):
         if i == position:
             data.get()
@@ -37,21 +50,31 @@ def delete_nth_from_stack(data: Stack, position: int) -> Stack:
             x.put(data.get())
 
     return x
-
-
-def delete_nth_from_queue(data: Queue, position: int) -> Queue:
-    # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
     return Queue()
 
 
 def sort_stack(data: Stack) -> Stack:
     # TODO: Retourner la séquence triée
-    return Stack()
+    x = Stack()
+    values = []
+    for i in range(len(data)):
+        values.append(data.get())
+
+    x.put_many(sorted(values))
+
+    return x
 
 
 def sort_queue(data: Queue) -> Queue:
     # TODO: Retourner la séquence triée
-    return Queue()
+    x = Queue()
+    values = []
+    for i in range(len(data)):
+        values.append(data.get())
+
+    x.put_many(sorted(values))
+
+    return x
 
 
 def string_and_structs(string: str) -> tuple:
@@ -60,6 +83,13 @@ def string_and_structs(string: str) -> tuple:
     # Sinon, on retire un élément de fifo pour l'insérer dans lifo.
 
     fifo, lifo = Queue(), Stack()
+
+    for i in string:
+        if i.isalpha():
+            fifo.put(i)
+        else:
+            lifo.put(fifo.get())
+
 
     return fifo, lifo
 
